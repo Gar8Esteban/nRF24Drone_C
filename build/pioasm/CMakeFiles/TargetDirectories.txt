@@ -1,0 +1,3 @@
+D:/Raspberry/Dron/build/pioasm/CMakeFiles/pioasm.dir
+D:/Raspberry/Dron/build/pioasm/CMakeFiles/edit_cache.dir
+D:/Raspberry/Dron/build/pioasm/CMakeFiles/rebuild_cache.dir
