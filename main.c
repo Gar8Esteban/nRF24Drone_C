@@ -17,7 +17,8 @@ void ceLow();
 void ceHigh();
 uint8_t leerReg(spi_inst_t *spi, uint8_t reg);
 void escribirReg(spi_inst_t *spi, uint8_t reg, uint8_t data);
-void configRx();
+void configRx(spi_inst_t *spi);
+void StndBy(spi_inst_t *spi);
 
 //********************************Variables Globales***********
 const int sck_pin = 10;
@@ -56,7 +57,8 @@ int main() {
     // Loop forever
     while (true) {
 
-        printf("\n STATUS = %x", leerReg(spi, CONFIG));
+        //printf("\n STATUS = %x", leerReg(spi, CONFIG));
+        StndBy(spi);
         sleep_ms(1000);
 
     }
@@ -106,4 +108,17 @@ void configRx(spi_inst_t *spi){
     ceHigh();
     escribirReg(spi, CONFIG ,reg);
     sleep_us(130);
+}
+
+void configTx(spi_inst_t *spi){
+    uint8_t reg = leerReg(spi, CONFIG);
+    reg = 0x01 | reg;
+    ceHigh();
+    escribirReg(spi, CONFIG ,reg);
+    sleep_us(130);
+}
+
+
+void StndBy(spi_inst_t *spi){
+    ceLow();
 }
