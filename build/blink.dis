@@ -31,23 +31,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  13 .comment      00000033  00000000  00000000  0000b688  2**0
                   CONTENTS, READONLY
- 14 .debug_info   00023d93  00000000  00000000  0000b6bb  2**0
+ 14 .debug_info   00024029  00000000  00000000  0000b6bb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_abbrev 00006d34  00000000  00000000  0002f44e  2**0
+ 15 .debug_abbrev 00006d73  00000000  00000000  0002f6e4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_loclists 0000e18a  00000000  00000000  00036182  2**0
+ 16 .debug_loclists 0000e2a9  00000000  00000000  00036457  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_aranges 00001460  00000000  00000000  00044310  2**3
+ 17 .debug_aranges 00001488  00000000  00000000  00044700  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_rnglists 00001802  00000000  00000000  00045770  2**0
+ 18 .debug_rnglists 00001820  00000000  00000000  00045b88  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   00015a02  00000000  00000000  00046f72  2**0
+ 19 .debug_line   00015ae6  00000000  00000000  000473a8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    00006db0  00000000  00000000  0005c974  2**0
+ 20 .debug_str    00006de9  00000000  00000000  0005ce8e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  00002930  00000000  00000000  00063724  2**2
+ 21 .debug_frame  000029b8  00000000  00000000  00063c78  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000303  00000000  00000000  00066054  2**0
+ 22 .debug_line_str 00000303  00000000  00000000  00066630  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 D:/Raspberry/Dron/build/blink.elf:     file format elf32-littlearm
@@ -14428,7 +14428,7 @@ Disassembly of section .data:
 20000192:	f38c 8810 	msr	PRIMASK, ip
 20000196:	0038      	movs	r0, r7
 20000198:	4641      	mov	r1, r8
-2000019a:	f000 f965 	bl	20000468 <__best_effort_wfe_or_timeout_veneer>
+2000019a:	f000 f95d 	bl	20000458 <__best_effort_wfe_or_timeout_veneer>
 2000019e:	2800      	cmp	r0, #0
 200001a0:	d0e5      	beq.n	2000016e <mutex_enter_block_until+0x1e>
 200001a2:	2000      	movs	r0, #0
@@ -14437,7 +14437,7 @@ Disassembly of section .data:
 200001a8:	4a0a      	ldr	r2, [pc, #40]	; (200001d4 <mutex_enter_block_until+0x84>)
 200001aa:	480b      	ldr	r0, [pc, #44]	; (200001d8 <mutex_enter_block_until+0x88>)
 200001ac:	217a      	movs	r1, #122	; 0x7a
-200001ae:	f000 f953 	bl	20000458 <____assert_func_veneer>
+200001ae:	f000 f963 	bl	20000478 <____assert_func_veneer>
 200001b2:	464b      	mov	r3, r9
 200001b4:	7123      	strb	r3, [r4, #4]
 200001b6:	6823      	ldr	r3, [r4, #0]
@@ -14462,7 +14462,7 @@ Disassembly of section .data:
 200001e2:	b082      	sub	sp, #8
 200001e4:	0007      	movs	r7, r0
 200001e6:	4688      	mov	r8, r1
-200001e8:	f000 f94e 	bl	20000488 <__time_us_64_veneer>
+200001e8:	f000 f93e 	bl	20000468 <__time_us_64_veneer>
 200001ec:	0004      	movs	r4, r0
 200001ee:	1e0d      	subs	r5, r1, #0
 200001f0:	db1c      	blt.n	2000022c <mutex_enter_timeout_ms+0x50>
@@ -14472,7 +14472,7 @@ Disassembly of section .data:
 200001f8:	2300      	movs	r3, #0
 200001fa:	4640      	mov	r0, r8
 200001fc:	2100      	movs	r1, #0
-200001fe:	f000 f93b 	bl	20000478 <____wrap___aeabi_lmul_veneer>
+200001fe:	f000 f943 	bl	20000488 <____wrap___aeabi_lmul_veneer>
 20000202:	0022      	movs	r2, r4
 20000204:	002b      	movs	r3, r5
 20000206:	1812      	adds	r2, r2, r0
@@ -14497,12 +14497,12 @@ Disassembly of section .data:
 2000022e:	4a06      	ldr	r2, [pc, #24]	; (20000248 <mutex_enter_timeout_ms+0x6c>)
 20000230:	4806      	ldr	r0, [pc, #24]	; (2000024c <mutex_enter_timeout_ms+0x70>)
 20000232:	213f      	movs	r1, #63	; 0x3f
-20000234:	f000 f910 	bl	20000458 <____assert_func_veneer>
+20000234:	f000 f920 	bl	20000478 <____assert_func_veneer>
 20000238:	4b02      	ldr	r3, [pc, #8]	; (20000244 <mutex_enter_timeout_ms+0x68>)
 2000023a:	4a03      	ldr	r2, [pc, #12]	; (20000248 <mutex_enter_timeout_ms+0x6c>)
 2000023c:	4803      	ldr	r0, [pc, #12]	; (2000024c <mutex_enter_timeout_ms+0x70>)
 2000023e:	213f      	movs	r1, #63	; 0x3f
-20000240:	f000 f90a 	bl	20000458 <____assert_func_veneer>
+20000240:	f000 f91a 	bl	20000478 <____assert_func_veneer>
 20000244:	10007af4 	.word	0x10007af4
 20000248:	10007fac 	.word	0x10007fac
 2000024c:	10007b10 	.word	0x10007b10
@@ -14533,7 +14533,7 @@ Disassembly of section .data:
 20000284:	4a03      	ldr	r2, [pc, #12]	; (20000294 <mutex_exit+0x44>)
 20000286:	4804      	ldr	r0, [pc, #16]	; (20000298 <mutex_exit+0x48>)
 20000288:	21a9      	movs	r1, #169	; 0xa9
-2000028a:	f000 f8e5 	bl	20000458 <____assert_func_veneer>
+2000028a:	f000 f8f5 	bl	20000478 <____assert_func_veneer>
 2000028e:	46c0      	nop			; (mov r8, r8)
 20000290:	10007f50 	.word	0x10007f50
 20000294:	10007f88 	.word	0x10007f88
@@ -14642,7 +14642,7 @@ Disassembly of section .data:
 20000364:	4a1b      	ldr	r2, [pc, #108]	; (200003d4 <flash_do_cmd+0xd0>)
 20000366:	481c      	ldr	r0, [pc, #112]	; (200003d8 <flash_do_cmd+0xd4>)
 20000368:	2180      	movs	r1, #128	; 0x80
-2000036a:	f000 f875 	bl	20000458 <____assert_func_veneer>
+2000036a:	f000 f885 	bl	20000478 <____assert_func_veneer>
 2000036e:	2b00      	cmp	r3, #0
 20000370:	d007      	beq.n	20000382 <flash_do_cmd+0x7e>
 20000372:	2a00      	cmp	r2, #0
@@ -14759,41 +14759,41 @@ Disassembly of section .data:
 20000454:	4770      	bx	lr
 20000456:	46c0      	nop			; (mov r8, r8)
 
-20000458 <____assert_func_veneer>:
+20000458 <__best_effort_wfe_or_timeout_veneer>:
 20000458:	b401      	push	{r0}
-2000045a:	4802      	ldr	r0, [pc, #8]	; (20000464 <____assert_func_veneer+0xc>)
+2000045a:	4802      	ldr	r0, [pc, #8]	; (20000464 <__best_effort_wfe_or_timeout_veneer+0xc>)
 2000045c:	4684      	mov	ip, r0
 2000045e:	bc01      	pop	{r0}
 20000460:	4760      	bx	ip
 20000462:	bf00      	nop
-20000464:	10001fe9 	.word	0x10001fe9
+20000464:	10001851 	.word	0x10001851
 
-20000468 <__best_effort_wfe_or_timeout_veneer>:
+20000468 <__time_us_64_veneer>:
 20000468:	b401      	push	{r0}
-2000046a:	4802      	ldr	r0, [pc, #8]	; (20000474 <__best_effort_wfe_or_timeout_veneer+0xc>)
+2000046a:	4802      	ldr	r0, [pc, #8]	; (20000474 <__time_us_64_veneer+0xc>)
 2000046c:	4684      	mov	ip, r0
 2000046e:	bc01      	pop	{r0}
 20000470:	4760      	bx	ip
 20000472:	bf00      	nop
-20000474:	10001851 	.word	0x10001851
+20000474:	10001971 	.word	0x10001971
 
-20000478 <____wrap___aeabi_lmul_veneer>:
+20000478 <____assert_func_veneer>:
 20000478:	b401      	push	{r0}
-2000047a:	4802      	ldr	r0, [pc, #8]	; (20000484 <____wrap___aeabi_lmul_veneer+0xc>)
+2000047a:	4802      	ldr	r0, [pc, #8]	; (20000484 <____assert_func_veneer+0xc>)
 2000047c:	4684      	mov	ip, r0
 2000047e:	bc01      	pop	{r0}
 20000480:	4760      	bx	ip
 20000482:	bf00      	nop
-20000484:	10004455 	.word	0x10004455
+20000484:	10001fe9 	.word	0x10001fe9
 
-20000488 <__time_us_64_veneer>:
+20000488 <____wrap___aeabi_lmul_veneer>:
 20000488:	b401      	push	{r0}
-2000048a:	4802      	ldr	r0, [pc, #8]	; (20000494 <__time_us_64_veneer+0xc>)
+2000048a:	4802      	ldr	r0, [pc, #8]	; (20000494 <____wrap___aeabi_lmul_veneer+0xc>)
 2000048c:	4684      	mov	ip, r0
 2000048e:	bc01      	pop	{r0}
 20000490:	4760      	bx	ip
 20000492:	bf00      	nop
-20000494:	10001971 	.word	0x10001971
+20000494:	10004455 	.word	0x10004455
 
 20000498 <striped_spin_lock_num>:
 20000498:	00000010                                ....

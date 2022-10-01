@@ -6,6 +6,8 @@
 #define NOP 0xFF
 #define PWR_UP 0x0A
 #define CHANNEL 0x5A
+#define TX_PAYLOAD 0xA0
+#define RX_PAYLOAD 0x61
 
 //********************************Registros nRF24**************
 #define CONFIG 0x00
@@ -15,6 +17,7 @@
 #define RX_ADDR 0x0A
 #define TX_ADDR 0x10
 #define RX_PW 0x11
+#define FIFO_STATUS 0x17
  
  //*******************************funciones********************
 void csLow();
@@ -25,6 +28,10 @@ uint8_t leerReg(spi_inst_t *spi, uint8_t reg);
 void escribirReg(spi_inst_t *spi, uint8_t reg, uint8_t data);
 void config(spi_inst_t *spi);
 void leerBytes(spi_inst_t *spi, uint8_t reg, char *msg, uint8_t size);
+void ModoTx(spi_inst_t* spi);
+void enviarMsg(spi_inst_t* spi, char *msg);
+void recirbirMsg(spi_inst_t* spi, char *msg);
+uint8_t nuevoMsg(spi_inst_t* spi);
 
 //********************************Variables Globales***********
 const int sck_pin = 10;
@@ -153,3 +160,43 @@ void config(spi_inst_t *spi){
     
 }
 
+void ModoTx(spi_inst_t* spi){
+    uint8_t reg = leerReg(spi, CONFIG);
+    reg &= ~(1<<0);
+    escribirReg(spi, CONFIG, reg);
+}
+
+void ModoRx(spi_inst_t* spi){
+    uint8_t reg = leerReg(spi, CONFIG);
+    reg &= ~(1<<0);
+    reg |= (1<<0);
+    escribirReg(spi, CONFIG, reg);
+    ceLow();
+    ceHigh();
+    sleep_us(130);
+}
+
+void enviarMsg(spi_inst_t* spi, char *msg){
+    uint8_t cmd = TX_PAYLOAD;
+    csLow();
+    spi_write_blocking(spi, &cmd, 1);
+    spi_write_blocking(spi, (uint8_t*)msg, 32);
+    csHigh();
+
+    ceHigh();
+    sleep_us(10);
+    ceLow();
+}
+
+void recirbirMsg(spi_inst_t* spi, char *msg){
+    uint8_t cmd = RX_PAYLOAD;
+    csLow();
+    spi_write_blocking(spi, &cmd, 1);
+    spi_read_blocking(spi, NOP, (uint8_t*)msg, 32);
+    csHigh();
+}
+
+uint8_t nuevoMsg(spi_inst_t* spi){
+    uint8_t fifo_status = leerReg(spi, FIFO_STATUS) & 0x01;
+    return !fifo_status;
+}
