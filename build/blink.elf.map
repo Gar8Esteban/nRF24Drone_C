@@ -96,15 +96,11 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/blink.dir/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/blink.dir/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/blink.dir/main.c.obj
- .text.ceHigh   0x00000000        0xc CMakeFiles/blink.dir/main.c.obj
+ .text.leerBytes
+                0x00000000       0x3a CMakeFiles/blink.dir/main.c.obj
  .text.ModoTx   0x00000000       0x1c CMakeFiles/blink.dir/main.c.obj
- .text.ModoRx   0x00000000       0x30 CMakeFiles/blink.dir/main.c.obj
  .text.enviarMsg
                 0x00000000       0x40 CMakeFiles/blink.dir/main.c.obj
- .text.recirbirMsg
-                0x00000000       0x32 CMakeFiles/blink.dir/main.c.obj
- .text.nuevoMsg
-                0x00000000       0x14 CMakeFiles/blink.dir/main.c.obj
  .rodata.ce_pin
                 0x00000000        0x4 CMakeFiles/blink.dir/main.c.obj
  .rodata.cs_pin
@@ -1444,9 +1440,9 @@ Discarded input sections
                 0x00000000       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
  .time_critical.spi_read16_blocking
                 0x00000000       0x3e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .text          0x00000000        0x0 C:\Users\USER\AppData\Local\Temp\cc420Ba0.o
- .data          0x00000000        0x0 C:\Users\USER\AppData\Local\Temp\cc420Ba0.o
- .bss           0x00000000        0x0 C:\Users\USER\AppData\Local\Temp\cc420Ba0.o
+ .text          0x00000000        0x0 C:\Users\USER\AppData\Local\Temp\ccwM6S1S.o
+ .data          0x00000000        0x0 C:\Users\USER\AppData\Local\Temp\ccwM6S1S.o
+ .bss           0x00000000        0x0 C:\Users\USER\AppData\Local\Temp\ccwM6S1S.o
  .data          0x00000000        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-calloc.o)
@@ -2077,11 +2073,11 @@ LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/n
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\USER\AppData\Local\Temp\cc420Ba0.o
+ .boot2         0x10000000      0x100 C:\Users\USER\AppData\Local\Temp\ccwM6S1S.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x7580
+.text           0x10000100     0x7548
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -2152,736 +2148,746 @@ LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/n
                 0x1000031c                csHigh
  .text.ceLow    0x10000328        0xc CMakeFiles/blink.dir/main.c.obj
                 0x10000328                ceLow
- .text.leerReg  0x10000334       0x3e CMakeFiles/blink.dir/main.c.obj
-                0x10000334                leerReg
- .text.leerBytes
-                0x10000372       0x3a CMakeFiles/blink.dir/main.c.obj
-                0x10000372                leerBytes
+ .text.ceHigh   0x10000334        0xc CMakeFiles/blink.dir/main.c.obj
+                0x10000334                ceHigh
+ .text.leerReg  0x10000340       0x3e CMakeFiles/blink.dir/main.c.obj
+                0x10000340                leerReg
  .text.escribirReg
-                0x100003ac       0x3c CMakeFiles/blink.dir/main.c.obj
-                0x100003ac                escribirReg
+                0x1000037e       0x3c CMakeFiles/blink.dir/main.c.obj
+                0x1000037e                escribirReg
  .text.escribirRegBytes
-                0x100003e8       0x44 CMakeFiles/blink.dir/main.c.obj
-                0x100003e8                escribirRegBytes
- .text.config   0x1000042c       0x68 CMakeFiles/blink.dir/main.c.obj
-                0x1000042c                config
- .text.main     0x10000494      0x114 CMakeFiles/blink.dir/main.c.obj
-                0x10000494                main
+                0x100003ba       0x44 CMakeFiles/blink.dir/main.c.obj
+                0x100003ba                escribirRegBytes
+ *fill*         0x100003fe        0x2 
+ .text.config   0x10000400       0x68 CMakeFiles/blink.dir/main.c.obj
+                0x10000400                config
+ .text.ModoRx   0x10000468       0x30 CMakeFiles/blink.dir/main.c.obj
+                0x10000468                ModoRx
+ .text.recirbirMsg
+                0x10000498       0x32 CMakeFiles/blink.dir/main.c.obj
+                0x10000498                recirbirMsg
+ .text.nuevoMsg
+                0x100004ca       0x14 CMakeFiles/blink.dir/main.c.obj
+                0x100004ca                nuevoMsg
+ *fill*         0x100004de        0x2 
+ .text.main     0x100004e0       0x8c CMakeFiles/blink.dir/main.c.obj
+                0x100004e0                main
  .text.gpio_set_function
-                0x100005a8       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100005a8                gpio_set_function
+                0x1000056c       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x1000056c                gpio_set_function
  .text.gpio_init
-                0x100005d8       0x16 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100005d8                gpio_init
- *fill*         0x100005ee        0x2 
+                0x1000059c       0x16 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x1000059c                gpio_init
+ *fill*         0x100005b2        0x2 
  .text.hw_claim_lock
-                0x100005f0       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x100005f0                hw_claim_lock
+                0x100005b4       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x100005b4                hw_claim_lock
  .text.hw_claim_unlock
-                0x10000608       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000608                hw_claim_unlock
+                0x100005cc       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x100005cc                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x1000061c       0x32 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x1000061c                hw_claim_or_assert
+                0x100005e0       0x32 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x100005e0                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x1000064e       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x1000064e                hw_claim_unused_from_range
- *fill*         0x1000069e        0x2 
+                0x10000612       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000612                hw_claim_unused_from_range
+ *fill*         0x10000662        0x2 
  .text.running_on_fpga
-                0x100006a0       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x100006a0                running_on_fpga
+                0x10000664       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10000664                running_on_fpga
  .text.spin_locks_reset
-                0x100006b4       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x100006b4                spin_locks_reset
+                0x10000678       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000678                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x100006d4       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x100006d4                next_striped_spin_lock_num
+                0x10000698       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000698                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x100006f0       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x100006f0                spin_lock_claim_unused
+                0x100006b4       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x100006b4                spin_lock_claim_unused
  .text.set_raw_irq_handler_and_unlock
-                0x10000714       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100006d8       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x1000073c       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000700       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x10000784       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000748       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x100007c4       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100007c4                irq_is_enabled
+                0x10000788       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000788                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x100007dc       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100007dc                irq_set_mask_enabled
+                0x100007a0       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007a0                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x100007fc        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100007fc                irq_set_enabled
- *fill*         0x1000080a        0x2 
+                0x100007c0        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007c0                irq_set_enabled
+ *fill*         0x100007ce        0x2 
  .text.irq_set_pending
-                0x1000080c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x1000080c                irq_set_pending
+                0x100007d0       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007d0                irq_set_pending
  .text.irq_get_vtable_handler
-                0x1000081c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x1000081c                irq_get_vtable_handler
+                0x100007e0       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007e0                irq_get_vtable_handler
  .text.irq_has_shared_handler
-                0x1000082c       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x1000082c                irq_has_shared_handler
+                0x100007f0       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007f0                irq_has_shared_handler
  .text.irq_set_exclusive_handler
-                0x10000850       0x54 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000850                irq_set_exclusive_handler
+                0x10000814       0x54 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000814                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x100008a4      0x230 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100008a4                irq_add_shared_handler
+                0x10000868      0x230 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000868                irq_add_shared_handler
  .text.irq_remove_handler
-                0x10000ad4      0x1a4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000ad4                irq_remove_handler
+                0x10000a98      0x1a4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000a98                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10000c78       0xf0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000c78                irq_add_tail_to_free_list
+                0x10000c3c       0xf0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000c3c                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x10000d68       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000d68                irq_init_priorities
+                0x10000d2c       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000d2c                irq_init_priorities
  .text.user_irq_claim_unused
-                0x10000d84       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000d84                user_irq_claim_unused
+                0x10000d48       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000d48                user_irq_claim_unused
  .text.lock_init
-                0x10000db4       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10000db4                lock_init
+                0x10000d78       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10000d78                lock_init
  .text.alarm_pool_post_alloc_init
-                0x10000dc4       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000d88       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x10000e04       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000dc8       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x10000e34       0x78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000e34                timer_pool_entry_comparator
+                0x10000df8       0x78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000df8                timer_pool_entry_comparator
  .text.ph_add_child_node
-                0x10000eac       0xa0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000e70       0xa0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x10000f4c       0x3e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10000f8a        0x2 
+                0x10000f10       0x3e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10000f4e        0x2 
  .text.add_alarm_under_lock
-                0x10000f8c      0x16c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000f50      0x16c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x100010f8      0x328 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x100010bc      0x328 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10001420       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001420                alarm_pool_init_default
+                0x100013e4       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x100013e4                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10001458       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001458                alarm_pool_get_default
+                0x1000141c       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000141c                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10001484      0x178 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001484                alarm_pool_add_alarm_at
+                0x10001448      0x178 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001448                alarm_pool_add_alarm_at
  .text.alarm_pool_cancel_alarm
-                0x100015fc       0xec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x100015fc                alarm_pool_cancel_alarm
+                0x100015c0       0xec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x100015c0                alarm_pool_cancel_alarm
  .text.sleep_until
-                0x100016e8       0xfc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x100016e8                sleep_until
+                0x100016ac       0xfc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x100016ac                sleep_until
  .text.sleep_us
-                0x100017e4       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x100017e4                sleep_us
+                0x100017a8       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x100017a8                sleep_us
  .text.sleep_ms
-                0x1000183c       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x1000183c                sleep_ms
+                0x10001800       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001800                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10001850       0x80 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001850                best_effort_wfe_or_timeout
+                0x10001814       0x80 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001814                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x100018d0       0x88 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001894       0x88 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001958       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001958                hardware_alarm_claim
+                0x1000191c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000191c                hardware_alarm_claim
  .text.time_us_64
-                0x10001970       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001970                time_us_64
+                0x10001934       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001934                time_us_64
  .text.busy_wait_until
-                0x10001988       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001988                busy_wait_until
+                0x1000194c       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000194c                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x100019b0       0x90 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x100019b0                hardware_alarm_set_callback
+                0x10001974       0x90 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001974                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10001a40       0xe8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001a40                hardware_alarm_set_target
+                0x10001a04       0xe8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001a04                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001b28       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001b28                hardware_alarm_cancel
+                0x10001aec       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001aec                hardware_alarm_cancel
  .text.ph_add_child_node
-                0x10001b68       0xa0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001b2c       0xa0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x10001c08       0x3e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10001c46        0x2 
+                0x10001bcc       0x3e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10001c0a        0x2 
  .text.ph_clear
-                0x10001c48       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001c48                ph_clear
+                0x10001c0c       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001c0c                ph_clear
  .text.ph_post_alloc_init
-                0x10001cb8        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001cb8                ph_post_alloc_init
- *fill*         0x10001cc6        0x2 
+                0x10001c7c        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001c7c                ph_post_alloc_init
+ *fill*         0x10001c8a        0x2 
  .text.ph_merge_two_pass
-                0x10001cc8       0xa4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001cc8                ph_merge_two_pass
+                0x10001c8c       0xa4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001c8c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x10001d6c      0x104 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001d30      0x104 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x10001e70       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001e70                ph_remove_head
+                0x10001e34       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001e34                ph_remove_head
  .text.ph_remove_and_free_node
-                0x10001e84       0xf8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001e84                ph_remove_and_free_node
+                0x10001e48       0xf8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001e48                ph_remove_and_free_node
  .text.mutex_init
-                0x10001f7c       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001f7c                mutex_init
+                0x10001f40       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001f40                mutex_init
  .text.recursive_mutex_init
-                0x10001f96       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001f96                recursive_mutex_init
+                0x10001f5a       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001f5a                recursive_mutex_init
  .text.critical_section_init_with_lock_num
-                0x10001fb4       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10001fb4                critical_section_init_with_lock_num
+                0x10001f78       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10001f78                critical_section_init_with_lock_num
  .text.critical_section_init
-                0x10001fc8       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10001fc8                critical_section_init
- .text._exit    0x10001fdc        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001fdc                _exit
- .text.exit     0x10001fe0        0x6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001fe0                exit
- *fill*         0x10001fe6        0x2 
+                0x10001f8c       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10001f8c                critical_section_init
+ .text._exit    0x10001fa0        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001fa0                _exit
+ .text.exit     0x10001fa4        0x6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001fa4                exit
+ *fill*         0x10001faa        0x2 
  .text.__assert_func
-                0x10001fe8       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001fe8                __assert_func
+                0x10001fac       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001fac                __assert_func
  .text.runtime_init
-                0x10002024       0xf8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002024                runtime_init
- .text.panic    0x1000211c       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000211c                panic
+                0x10001fe8       0xf8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001fe8                runtime_init
+ .text.panic    0x100020e0       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100020e0                panic
  .text.clock_configure
-                0x1000214c      0x104 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x1000214c                clock_configure
+                0x10002110      0x104 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10002110                clock_configure
  .text.clocks_init
-                0x10002250      0x100 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002250                clocks_init
+                0x10002214      0x100 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10002214                clocks_init
  .text.clock_get_hz
-                0x10002350        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002350                clock_get_hz
+                0x10002314        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10002314                clock_get_hz
  .text.pll_init
-                0x1000235c      0x140 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x1000235c                pll_init
+                0x10002320      0x140 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10002320                pll_init
  .text.watchdog_start_tick
-                0x1000249c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x1000249c                watchdog_start_tick
+                0x10002460       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002460                watchdog_start_tick
  .text.watchdog_update
-                0x100024ac       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x100024ac                watchdog_update
+                0x10002470       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002470                watchdog_update
  .text._watchdog_enable
-                0x100024c0       0x78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x100024c0                _watchdog_enable
+                0x10002484       0x78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002484                _watchdog_enable
  .text.watchdog_reboot
-                0x10002538       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10002538                watchdog_reboot
+                0x100024fc       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x100024fc                watchdog_reboot
  .text.xosc_init
-                0x10002580       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10002580                xosc_init
+                0x10002544       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10002544                xosc_init
  .text._out_null
-                0x100025a8        0x2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000256c        0x2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x100025aa        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x100025b8       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000256e        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x1000257c       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x100025dc       0xae CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100025a0       0xae CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x1000268a      0x112 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000264e      0x112 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x1000279c       0xbc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002760       0xbc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x10002858       0xe2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x1000293a        0x2 
- .text._etoa    0x1000293c      0x414 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x10002d50      0x354 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000281c       0xe2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x100028fe        0x2 
+ .text._etoa    0x10002900      0x414 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x10002d14      0x354 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x100030a4      0x650 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003068      0x650 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x100036f4       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x100036f4                vfctprintf
- .text          0x10003714       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x100036b8       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100036b8                vfctprintf
+ .text          0x100036d8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10003724       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003724                rom_func_lookup
+                0x100036e8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100036e8                rom_func_lookup
  .text.rom_data_lookup
-                0x10003734       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003734                rom_data_lookup
+                0x100036f8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100036f8                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10003744       0x36 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003744                rom_funcs_lookup
- *fill*         0x1000377a        0x2 
+                0x10003708       0x36 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003708                rom_funcs_lookup
+ *fill*         0x1000373e        0x2 
  .text.__wrap___aeabi_idiv
-                0x1000377c       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x1000377c                __wrap___aeabi_idivmod
-                0x1000377c                divmod_s32s32
-                0x1000377c                div_s32s32
-                0x1000377c                __wrap___aeabi_idiv
-                0x10003784                divmod_s32s32_unsafe
-                0x100037b0                divmod_s32s32_savestate
+                0x10003740       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003740                __wrap___aeabi_idivmod
+                0x10003740                divmod_s32s32
+                0x10003740                div_s32s32
+                0x10003740                __wrap___aeabi_idiv
+                0x10003748                divmod_s32s32_unsafe
+                0x10003774                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x100037cc       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100037cc                __wrap___aeabi_uidiv
-                0x100037cc                __wrap___aeabi_uidivmod
-                0x100037cc                div_u32u32
-                0x100037cc                divmod_u32u32
-                0x100037d4                divmod_u32u32_unsafe
-                0x100037fc                divmod_u32u32_savestate
+                0x10003790       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003790                __wrap___aeabi_uidiv
+                0x10003790                __wrap___aeabi_uidivmod
+                0x10003790                div_u32u32
+                0x10003790                divmod_u32u32
+                0x10003798                divmod_u32u32_unsafe
+                0x100037c0                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x10003818      0x434 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10003818                div_s64s64
-                0x10003818                divmod_s64s64
-                0x10003818                __wrap___aeabi_ldivmod
-                0x10003850                divmod_u64u64
-                0x10003850                div_u64u64
-                0x10003850                __wrap___aeabi_uldivmod
-                0x10003860                divmod_u64u64_savestate
-                0x10003888                divmod_s64s64_unsafe
-                0x10003910                divmod_u64u64_unsafe
+                0x100037dc      0x434 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100037dc                div_s64s64
+                0x100037dc                divmod_s64s64
+                0x100037dc                __wrap___aeabi_ldivmod
+                0x10003814                divmod_u64u64
+                0x10003814                div_u64u64
+                0x10003814                __wrap___aeabi_uldivmod
+                0x10003824                divmod_u64u64_savestate
+                0x1000384c                divmod_s64s64_unsafe
+                0x100038d4                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x10003c4c       0x80 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003c4c                __wrap___aeabi_drsub
-                0x10003c52                __wrap___aeabi_dsub
-                0x10003c64                __wrap___aeabi_dadd
-                0x10003c76                __wrap___aeabi_ddiv
-                0x10003cb2                __wrap___aeabi_dmul
+                0x10003c10       0x80 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003c10                __wrap___aeabi_drsub
+                0x10003c16                __wrap___aeabi_dsub
+                0x10003c28                __wrap___aeabi_dadd
+                0x10003c3a                __wrap___aeabi_ddiv
+                0x10003c76                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x10003ccc       0x6c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003ccc                __wrap___aeabi_cdrcmple
-                0x10003cdc                __wrap___aeabi_cdcmpeq
-                0x10003cdc                __wrap___aeabi_cdcmple
+                0x10003c90       0x6c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003c90                __wrap___aeabi_cdrcmple
+                0x10003ca0                __wrap___aeabi_cdcmpeq
+                0x10003ca0                __wrap___aeabi_cdcmple
  .text.__wrap___aeabi_dcmplt
-                0x10003d38        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d38                __wrap___aeabi_dcmplt
+                0x10003cfc        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003cfc                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x10003d44       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d44                __wrap___aeabi_dcmple
+                0x10003d08       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d08                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x10003d54       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d54                __wrap___aeabi_dcmpge
+                0x10003d18       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d18                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x10003d64        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d64                __wrap___aeabi_dcmpgt
+                0x10003d28        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d28                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x10003d6e       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d6e                __wrap___aeabi_dcmpun
- *fill*         0x10003d8a        0x2 
+                0x10003d32       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d32                __wrap___aeabi_dcmpun
+ *fill*         0x10003d4e        0x2 
  .text.__wrap___aeabi_i2d
-                0x10003d8c       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d8c                __wrap___aeabi_ui2d
-                0x10003d94                __wrap___aeabi_i2d
+                0x10003d50       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d50                __wrap___aeabi_ui2d
+                0x10003d58                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x10003dc4       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003dc4                double2int_z
-                0x10003dc4                __wrap___aeabi_d2iz
+                0x10003d88       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d88                double2int_z
+                0x10003d88                __wrap___aeabi_d2iz
  .text.__wrap___aeabi_d2uiz
-                0x10003e0c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003e0c                __wrap___aeabi_d2uiz
-                0x10003e0c                double2uint
+                0x10003dd0       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003dd0                __wrap___aeabi_d2uiz
+                0x10003dd0                double2uint
  .text.__aeabi_double_init
-                0x10003e24       0xc8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x10003e24                __aeabi_double_init
+                0x10003de8       0xc8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10003de8                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10003eec       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003eec                double_table_shim_on_use_helper
+                0x10003eb0       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003eb0                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x10003f20       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003f20                drsub_shim
-                0x10003f26                dsub_shim
+                0x10003ee4       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003ee4                drsub_shim
+                0x10003eea                dsub_shim
  .text.dadd_shim
-                0x10003f30      0x15c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003f30                dadd_shim
+                0x10003ef4      0x15c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003ef4                dadd_shim
  .text.dmul_shim
-                0x1000408c      0x15c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000408c                dmul_shim
+                0x10004050      0x15c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004050                dmul_shim
  .text.ddiv_shim
-                0x100041e8      0x1b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100041e8                ddiv_shim
+                0x100041ac      0x1b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100041ac                ddiv_shim
  .text.double2uint_shim
-                0x10004398        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004398                double2uint_shim
-                0x1000439a                double2ufix_shim
- *fill*         0x100043a6        0x2 
+                0x1000435c        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000435c                double2uint_shim
+                0x1000435e                double2ufix_shim
+ *fill*         0x1000436a        0x2 
  .text.double2uint64_shim
-                0x100043a8       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100043a8                double2uint64_shim
-                0x100043aa                double2ufix64_shim
-                0x100043ca                d2fix_a
+                0x1000436c       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000436c                double2uint64_shim
+                0x1000436e                double2ufix64_shim
+                0x1000438e                d2fix_a
  .text.dunpacks
-                0x10004418       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004418                dunpacks
+                0x100043dc       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100043dc                dunpacks
  .text.__aeabi_lmul
-                0x10004454       0x32 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10004454                __wrap___aeabi_lmul
- *fill*         0x10004486        0x2 
+                0x10004418       0x32 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10004418                __wrap___aeabi_lmul
+ *fill*         0x1000444a        0x2 
  .text.__aeabi_float_init
-                0x10004488       0xfc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10004488                __aeabi_float_init
+                0x1000444c       0xfc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x1000444c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10004584       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10004584                float_table_shim_on_use_helper
- .text          0x100045b8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100045b8                __aeabi_mem_init
- .text.memset   0x100045c8        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100045c8                __wrap_memset
- .text.memcpy   0x100045d4        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100045d4                __wrap_memcpy
-                0x100045d4                __wrap___aeabi_memcpy
+                0x10004548       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10004548                float_table_shim_on_use_helper
+ .text          0x1000457c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x1000457c                __aeabi_mem_init
+ .text.memset   0x1000458c        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x1000458c                __wrap_memset
+ .text.memcpy   0x10004598        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004598                __wrap_memcpy
+                0x10004598                __wrap___aeabi_memcpy
  .text.stdio_out_chars_no_crlf
-                0x100045e0        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100045ee        0x2 
+                0x100045a4        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x100045b2        0x2 
  .text.stdio_out_chars_crlf
-                0x100045f0       0x80 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100045b4       0x80 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x10004670       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004634       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x100046b4       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004678       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x100046d4       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100046d4                stdout_serialize_begin
+                0x10004698       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004698                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x10004704       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004704                stdout_serialize_end
+                0x100046c8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100046c8                stdout_serialize_end
  .text.stdio_put_string
-                0x10004714       0x98 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100046d8       0x98 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_set_driver_enabled
-                0x100047ac       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100047ac                stdio_set_driver_enabled
+                0x10004770       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004770                stdio_set_driver_enabled
  .text.stdio_flush
-                0x100047d8       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100047d8                stdio_flush
+                0x1000479c       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000479c                stdio_flush
  .text.__wrap_puts
-                0x100047f8       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100047f8                __wrap_puts
- *fill*         0x10004816        0x2 
+                0x100047bc       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100047bc                __wrap_puts
+ *fill*         0x100047da        0x2 
  .text.__wrap_vprintf
-                0x10004818       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004818                __wrap_vprintf
+                0x100047dc       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100047dc                __wrap_vprintf
  .text.__wrap_printf
-                0x1000485c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x1000485c                __wrap_printf
+                0x10004820       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004820                __wrap_printf
  .text.stdio_init_all
-                0x10004874        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004874                stdio_init_all
+                0x10004838        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004838                stdio_init_all
  .text.resetd_init
-                0x1000487c        0x2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- *fill*         0x1000487e        0x2 
+                0x10004840        0x2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ *fill*         0x10004842        0x2 
  .text.resetd_reset
-                0x10004880        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004844        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x1000488c       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004850       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x100048c0        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004884        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.reset_usb_boot
-                0x100048c4       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004888       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x100048dc       0x5c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x100048a0       0x5c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x10004938        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x10004938                usbd_app_driver_get_cb
+                0x100048fc        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x100048fc                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x10004944       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x10004944                tud_cdc_line_coding_cb
+                0x10004908       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10004908                tud_cdc_line_coding_cb
  .text.stdio_usb_in_chars
-                0x1000496c       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x1000496c                stdio_usb_in_chars
+                0x10004930       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004930                stdio_usb_in_chars
  .text.low_priority_worker_irq
-                0x100049dc       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100049a0       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_out_chars
-                0x100049fc       0xd4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100049c0       0xd4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x10004ad0       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .text.usb_irq  0x10004b10       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004a94       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .text.usb_irq  0x10004ad4       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_init
-                0x10004b20       0xec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10004b20                stdio_usb_init
+                0x10004ae4       0xec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10004ae4                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x10004c0c        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10004c0c                tud_descriptor_device_cb
+                0x10004bd0        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10004bd0                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x10004c14        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10004c14                tud_descriptor_configuration_cb
+                0x10004bd8        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10004bd8                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x10004c1c       0x6c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10004c1c                tud_descriptor_string_cb
+                0x10004be0       0x6c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10004be0                tud_descriptor_string_cb
  .text.hw_endpoint_get_by_addr
-                0x10004c88       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004c4c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.reset_ep0_pid
-                0x10004ca0       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004c64       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text._hw_endpoint_alloc
-                0x10004cc8       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004c8c       0x70 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.hw_endpoint_init
-                0x10004d38       0x88 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004cfc       0x88 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.reset_non_control_endpoints
-                0x10004dc0       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004d84       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.hw_handle_buff_status
-                0x10004e00       0x8c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004dc4       0x8c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_rp2040_irq
-                0x10004e8c       0xc0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004e50       0xc0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.hw_endpoint_xfer
-                0x10004f4c       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004f10       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_int_enable
-                0x10004f60       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10004f60                dcd_int_enable
+                0x10004f24       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004f24                dcd_int_enable
  .text.dcd_set_address
-                0x10004f8c       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10004f8c                dcd_set_address
+                0x10004f50       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004f50                dcd_set_address
  .text.dcd_connect
-                0x10004fb8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10004fb8                dcd_connect
+                0x10004f7c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004f7c                dcd_connect
  .text.dcd_init
-                0x10004fc8       0x7c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10004fc8                dcd_init
+                0x10004f8c       0x7c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10004f8c                dcd_init
  .text.dcd_edpt0_status_complete
-                0x10005044       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005044                dcd_edpt0_status_complete
+                0x10005008       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005008                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x10005060       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005060                dcd_edpt_open
+                0x10005024       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005024                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x100050a0        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x100050a0                dcd_edpt_close_all
+                0x10005064        0x8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005064                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x100050a8       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x100050a8                dcd_edpt_xfer
+                0x1000506c       0x30 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x1000506c                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x100050d8       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x100050d8                dcd_edpt_stall
+                0x1000509c       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x1000509c                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x10005104       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005104                dcd_edpt_clear_stall
+                0x100050c8       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x100050c8                dcd_edpt_clear_stall
  .text.prepare_ep_buffer
-                0x10005124       0x6c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x100050e8       0x6c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .text.sync_ep_buffer
-                0x10005190       0x78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10005154       0x78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .text._hw_endpoint_xfer_sync
-                0x10005208       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x100051cc       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .text.rp2040_usb_init
-                0x10005230       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10005230                rp2040_usb_init
+                0x100051f4       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x100051f4                rp2040_usb_init
  .text.hw_endpoint_reset_transfer
-                0x1000527c        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x1000527c                hw_endpoint_reset_transfer
+                0x10005240        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10005240                hw_endpoint_reset_transfer
  .text._hw_endpoint_buffer_control_update32
-                0x10005288       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10005288                _hw_endpoint_buffer_control_update32
+                0x1000524c       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x1000524c                _hw_endpoint_buffer_control_update32
  .text._hw_endpoint_start_next_buffer
-                0x100052e0       0x74 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x100052a4       0x74 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .text.hw_endpoint_xfer_start
-                0x10005354       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10005354                hw_endpoint_xfer_start
+                0x10005318       0x48 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10005318                hw_endpoint_xfer_start
  .text.hw_endpoint_xfer_continue
-                0x1000539c       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x1000539c                hw_endpoint_xfer_continue
+                0x10005360       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10005360                hw_endpoint_xfer_continue
  .text.configuration_reset
-                0x100053d4       0x84 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005398       0x84 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.usbd_reset
-                0x10005458        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000541c        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.invoke_class_control
-                0x10005464       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x1000547e        0x2 
+                0x10005428       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x10005442        0x2 
  .text.process_set_config
-                0x10005480      0x1b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005444      0x1b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.process_get_descriptor
-                0x10005630       0xec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100055f4       0xec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.tud_mounted
-                0x1000571c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x1000571c                tud_mounted
+                0x100056e0       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100056e0                tud_mounted
  .text.tud_suspended
-                0x1000572c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x1000572c                tud_suspended
+                0x100056f0       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100056f0                tud_suspended
  .text.tud_inited
-                0x1000573c        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x1000573c                tud_inited
+                0x10005700        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005700                tud_inited
  .text.tud_init
-                0x10005748       0xcc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005748                tud_init
+                0x1000570c       0xcc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000570c                tud_init
  .text.dcd_event_handler
-                0x10005814      0x1e0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005814                dcd_event_handler
+                0x100057d8      0x1e0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100057d8                dcd_event_handler
  .text.dcd_event_bus_signal
-                0x100059f4       0x26 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x100059f4                dcd_event_bus_signal
+                0x100059b8       0x26 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100059b8                dcd_event_bus_signal
  .text.dcd_event_bus_reset
-                0x10005a1a       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005a1a                dcd_event_bus_reset
+                0x100059de       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100059de                dcd_event_bus_reset
  .text.dcd_event_setup_received
-                0x10005a44       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005a44                dcd_event_setup_received
+                0x10005a08       0x34 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005a08                dcd_event_setup_received
  .text.dcd_event_xfer_complete
-                0x10005a78       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005a78                dcd_event_xfer_complete
+                0x10005a3c       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005a3c                dcd_event_xfer_complete
  .text.usbd_edpt_open
-                0x10005abc       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005abc                usbd_edpt_open
+                0x10005a80       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005a80                usbd_edpt_open
  .text.usbd_open_edpt_pair
-                0x10005b14       0x8c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005b14                usbd_open_edpt_pair
+                0x10005ad8       0x8c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005ad8                usbd_open_edpt_pair
  .text.usbd_edpt_claim
-                0x10005ba0       0x8c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005ba0                usbd_edpt_claim
+                0x10005b64       0x8c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005b64                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x10005c2c       0x68 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005c2c                usbd_edpt_release
+                0x10005bf0       0x68 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005bf0                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x10005c94       0x84 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005c94                usbd_edpt_xfer
+                0x10005c58       0x84 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005c58                usbd_edpt_xfer
  .text.usbd_edpt_stall
-                0x10005d18       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005d18                usbd_edpt_stall
+                0x10005cdc       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005cdc                usbd_edpt_stall
  .text.usbd_edpt_clear_stall
-                0x10005d58       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005d58                usbd_edpt_clear_stall
+                0x10005d1c       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005d1c                usbd_edpt_clear_stall
  .text.usbd_edpt_stalled
-                0x10005d98       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005d98                usbd_edpt_stalled
+                0x10005d5c       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005d5c                usbd_edpt_stalled
  .text.process_control_request
-                0x10005db4      0x3b8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005d78      0x3b8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.tud_task
-                0x1000616c      0x218 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x1000616c                tud_task
+                0x10006130      0x218 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006130                tud_task
  .text._data_stage_xact
-                0x10006384       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006348       0x58 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .text.tud_control_status
-                0x100063dc       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100063dc                tud_control_status
+                0x100063a0       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x100063a0                tud_control_status
  .text.tud_control_xfer
-                0x10006414       0xa8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10006414                tud_control_xfer
+                0x100063d8       0xa8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x100063d8                tud_control_xfer
  .text.usbd_control_reset
-                0x100064bc       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100064bc                usbd_control_reset
+                0x10006480       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006480                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x100064d0        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100064d0                usbd_control_set_complete_callback
+                0x10006494        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006494                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x100064dc       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100064dc                usbd_control_set_request
+                0x100064a0       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x100064a0                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x100064f8       0xfc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x100064f8                usbd_control_xfer_cb
+                0x100064bc       0xfc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x100064bc                usbd_control_xfer_cb
  .text._prep_out_transaction
-                0x100065f4       0x46 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- *fill*         0x1000663a        0x2 
+                0x100065b8       0x46 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ *fill*         0x100065fe        0x2 
  .text.tud_cdc_n_connected
-                0x1000663c       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x1000663c                tud_cdc_n_connected
+                0x10006600       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006600                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x10006680       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006680                tud_cdc_n_available
+                0x10006644       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006644                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x10006698       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006698                tud_cdc_n_read
+                0x1000665c       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x1000665c                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x100066c0       0xcc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x100066c0                tud_cdc_n_write_flush
+                0x10006684       0xcc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006684                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x1000678c       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x1000678c                tud_cdc_n_write
+                0x10006750       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006750                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x100067c4       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x100067c4                tud_cdc_n_write_available
+                0x10006788       0x1c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006788                tud_cdc_n_write_available
  .text.cdcd_init
-                0x100067e0       0xbc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x100067e0                cdcd_init
+                0x100067a4       0xbc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x100067a4                cdcd_init
  .text.cdcd_reset
-                0x1000689c       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x1000689c                cdcd_reset
+                0x10006860       0x44 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006860                cdcd_reset
  .text.cdcd_open
-                0x100068e0       0xf8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x100068e0                cdcd_open
+                0x100068a4       0xf8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x100068a4                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x100069d8      0x134 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x100069d8                cdcd_control_xfer_cb
+                0x1000699c      0x134 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x1000699c                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x10006b0c      0x144 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006b0c                cdcd_xfer_cb
+                0x10006ad0      0x144 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006ad0                cdcd_xfer_cb
  .text.tusb_init
-                0x10006c50       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10006c50                tusb_init
+                0x10006c14       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006c14                tusb_init
  .text.tusb_inited
-                0x10006c74        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10006c74                tusb_inited
- *fill*         0x10006c82        0x2 
+                0x10006c38        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006c38                tusb_inited
+ *fill*         0x10006c46        0x2 
  .text.tu_edpt_validate
-                0x10006c84       0xa8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10006c84                tu_edpt_validate
+                0x10006c48       0xa8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006c48                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x10006d2c       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10006d2c                tu_edpt_bind_driver
+                0x10006cf0       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10006cf0                tu_edpt_bind_driver
  .text.advance_pointer
-                0x10006d56       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006d1a       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text.backward_pointer
-                0x10006d6e       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006d32       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text.get_relative_pointer
-                0x10006d8c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006d50       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._tu_fifo_peek
-                0x10006d9c       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006d60       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._ff_pull_const_addr
-                0x10006dec       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006db0       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._ff_pull_n
-                0x10006e38      0x10c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006dfc      0x10c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._tu_fifo_peek_n
-                0x10006f44       0x5e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006f08       0x5e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._tu_fifo_read_n
-                0x10006fa2       0x4e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006f66       0x4e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._ff_push_const_addr
-                0x10006ff0       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006fb4       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._ff_push_n
-                0x10007030      0x108 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10006ff4      0x108 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text._tu_fifo_write_n
-                0x10007138       0x9e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100070fc       0x9e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text.tu_fifo_config
-                0x100071d6       0x72 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100071d6                tu_fifo_config
+                0x1000719a       0x72 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x1000719a                tu_fifo_config
  .text.tu_fifo_count
-                0x10007248       0x26 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007248                tu_fifo_count
+                0x1000720c       0x26 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x1000720c                tu_fifo_count
  .text.tu_fifo_empty
-                0x1000726e        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x1000726e                tu_fifo_empty
+                0x10007232        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007232                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x1000727c       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x1000727c                tu_fifo_remaining
+                0x10007240       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007240                tu_fifo_remaining
  .text.tu_fifo_read
-                0x1000729c       0x42 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x1000729c                tu_fifo_read
+                0x10007260       0x42 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007260                tu_fifo_read
  .text.tu_fifo_read_n
-                0x100072de        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100072de                tu_fifo_read_n
+                0x100072a2        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100072a2                tu_fifo_read_n
  .text.tu_fifo_write
-                0x100072e8       0x6a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100072e8                tu_fifo_write
+                0x100072ac       0x6a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100072ac                tu_fifo_write
  .text.tu_fifo_write_n
-                0x10007352        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007352                tu_fifo_write_n
+                0x10007316        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007316                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x1000735c       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x1000735c                tu_fifo_clear
+                0x10007320       0x4c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007320                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x100073a8       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100073a8                tu_fifo_set_overwritable
+                0x1000736c       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x1000736c                tu_fifo_set_overwritable
  .text._retrieve_unique_id_on_boot
-                0x100073e4       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x100073a8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x100073f4       0x5c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x100073f4                pico_get_unique_board_id_string
+                0x100073b8       0x5c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x100073b8                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x10007450       0x46 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x10007450                flash_get_unique_id
+                0x10007414       0x46 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x10007414                flash_get_unique_id
  .text.spi_set_baudrate
-                0x10007496       0x92 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-                0x10007496                spi_set_baudrate
+                0x1000745a       0x92 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+                0x1000745a                spi_set_baudrate
  .text.spi_init
-                0x10007528       0x68 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-                0x10007528                spi_init
- .text.strlen   0x10007590       0x5c d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
-                0x10007590                strlen
+                0x100074ec       0x68 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+                0x100074ec                spi_init
+ .text.strlen   0x10007554       0x5c d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
+                0x10007554                strlen
  *(.fini)
- .fini          0x100075ec        0x4 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crti.o
-                0x100075ec                _fini
- .fini.__stub   0x100075f0       0x90 linker stubs
+ .fini          0x100075b0        0x4 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crti.o
+                0x100075b0                _fini
+ *fill*         0x100075b4        0x4 
+ .fini.__stub   0x100075b8       0x90 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2893,401 +2899,400 @@ LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/n
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10007680        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x10007680                . = ALIGN (0x4)
+ .eh_frame      0x10007648        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x10007648                . = ALIGN (0x4)
 
-.glue_7         0x10007680        0x0
- .glue_7        0x10007680        0x0 linker stubs
+.glue_7         0x10007648        0x0
+ .glue_7        0x10007648        0x0 linker stubs
 
-.glue_7t        0x10007680        0x0
- .glue_7t       0x10007680        0x0 linker stubs
+.glue_7t        0x10007648        0x0
+ .glue_7t       0x10007648        0x0 linker stubs
 
-.vfp11_veneer   0x10007680        0x0
- .vfp11_veneer  0x10007680        0x0 linker stubs
+.vfp11_veneer   0x10007648        0x0
+ .vfp11_veneer  0x10007648        0x0 linker stubs
 
-.v4_bx          0x10007680        0x0
- .v4_bx         0x10007680        0x0 linker stubs
+.v4_bx          0x10007648        0x0
+ .v4_bx         0x10007648        0x0 linker stubs
 
-.iplt           0x10007680        0x0
- .iplt          0x10007680        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10007648        0x0
+ .iplt          0x10007648        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10007680     0x1710
+.rodata         0x10007648     0x16b8
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.config.str1.4
-                0x10007680        0x6 CMakeFiles/blink.dir/main.c.obj
- *fill*         0x10007686        0x2 
+                0x10007648        0x6 CMakeFiles/blink.dir/main.c.obj
+ *fill*         0x1000764e        0x2 
  .rodata.main.str1.4
-                0x10007688       0x5a CMakeFiles/blink.dir/main.c.obj
- *fill*         0x100076e2        0x2 
+                0x10007650        0x5 CMakeFiles/blink.dir/main.c.obj
+ *fill*         0x10007655        0x3 
  .rodata.spin_lock_claim_unused.str1.4
-                0x100076e4       0x1b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x100076ff        0x1 
+                0x10007658       0x1b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x10007673        0x1 
  .rodata.make_branch.str1.4
-                0x10007700       0x6f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000776f        0x1 
+                0x10007674       0x6f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100076e3        0x1 
  .rodata.insert_branch_and_link.str1.4
-                0x10007770       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100076e4       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_set_exclusive_handler.str1.4
-                0x10007780       0x36 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100077b6        0x2 
+                0x100076f4       0x36 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000772a        0x2 
  .rodata.irq_add_shared_handler.str1.4
-                0x100077b8       0xd9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10007891        0x3 
+                0x1000772c       0xd9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10007805        0x3 
  .rodata.irq_remove_handler.str1.4
-                0x10007894       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100078be        0x2 
+                0x10007808       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10007832        0x2 
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x100078c0       0x3a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100078fa        0x2 
+                0x10007834       0x3a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000786e        0x2 
  .rodata.user_irq_claim_unused.str1.4
-                0x100078fc       0x1b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10007917        0x1 
+                0x10007870       0x1b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000788b        0x1 
  .rodata.__func__.0
-                0x10007918       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10007932        0x2 
+                0x1000788c       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100078a6        0x2 
  .rodata.__func__.1
-                0x10007934       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000794b        0x1 
+                0x100078a8       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100078bf        0x1 
  .rodata.__func__.2
-                0x1000794c       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000795f        0x1 
+                0x100078c0       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100078d3        0x1 
  .rodata.__func__.3
-                0x10007960        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100078d4        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4
-                0x1000796c        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000797b        0x1 
+                0x100078e0        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100078ef        0x1 
  .rodata.__func__.5
-                0x1000797c       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10007993        0x1 
+                0x100078f0       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10007907        0x1 
  .rodata.__func__.6
-                0x10007994       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100079ae        0x2 
+                0x10007908       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10007922        0x2 
  .rodata.repeating_timer_callback.str1.4
-                0x100079b0       0x4d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100079fd        0x3 
+                0x10007924       0x4d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007971        0x3 
  .rodata.alarm_pool_dump_key.str1.4
-                0x10007a00       0x33 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007a33        0x1 
+                0x10007974       0x33 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100079a7        0x1 
  .rodata.ph_add_child_node.str1.4
-                0x10007a34       0x96 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007aca        0x2 
+                0x100079a8       0x96 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007a3e        0x2 
  .rodata.add_alarm_under_lock.str1.4
-                0x10007acc       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10007a40       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
                                  0x2b (size before relaxing)
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x10007af4       0xe6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007bda        0x2 
+                0x10007a68       0xe6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007b4e        0x2 
  .rodata.alarm_pool_get_default.str1.4
-                0x10007bdc       0x21 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007bfd        0x3 
+                0x10007b50       0x21 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007b71        0x3 
  .rodata.alarm_pool_cancel_alarm.str1.4
-                0x10007c00       0x27 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007c27        0x1 
+                0x10007b74       0x27 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007b9b        0x1 
  .rodata.sleep_until.str1.4
-                0x10007c28       0x4d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007c75        0x3 
+                0x10007b9c       0x4d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007be9        0x3 
  .rodata.__func__.1
-                0x10007c78       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10007bec       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.10
-                0x10007c90       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007ca5        0x3 
+                0x10007c04       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007c19        0x3 
  .rodata.__func__.11
-                0x10007ca8       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007cc2        0x2 
+                0x10007c1c       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007c36        0x2 
  .rodata.__func__.12
-                0x10007cc4        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007cce        0x2 
+                0x10007c38        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007c42        0x2 
  .rodata.__func__.3
-                0x10007cd0       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007ce7        0x1 
+                0x10007c44       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007c5b        0x1 
  .rodata.__func__.4
-                0x10007ce8       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007cfa        0x2 
+                0x10007c5c       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007c6e        0x2 
  .rodata.__func__.5
-                0x10007cfc        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007d09        0x3 
+                0x10007c70        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007c7d        0x3 
  .rodata.__func__.6
-                0x10007d0c       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007d1e        0x2 
+                0x10007c80       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007c92        0x2 
  .rodata.__func__.7
-                0x10007d20        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007d2f        0x1 
+                0x10007c94        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007ca3        0x1 
  .rodata.__func__.8
-                0x10007d30        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10007ca4        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.9
-                0x10007d3c       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10007d51        0x3 
+                0x10007cb0       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10007cc5        0x3 
  .rodata.hardware_alarm_claim.str1.4
-                0x10007d54       0x22 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10007d76        0x2 
+                0x10007cc8       0x22 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10007cea        0x2 
  .rodata.hardware_alarm_set_target.str1.4
-                0x10007d78       0x67 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10007ddf        0x1 
+                0x10007cec       0x67 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10007d53        0x1 
  .rodata.__func__.0
-                0x10007de0       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10007d54       0x1a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10007dfa       0x96 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10007dfa        0x2 
+                0x10007d6e       0x96 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10007d6e        0x2 
  .rodata.ph_remove_any_head.str1.4
-                0x10007dfc       0x90 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10007d70       0x90 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_and_free_node.str1.4
-                0x10007e8c       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10007e00       0x1e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
                                  0x26 (size before relaxing)
- *fill*         0x10007eaa        0x2 
+ *fill*         0x10007e1e        0x2 
  .rodata.__func__.0
-                0x10007eac       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10007e20       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__func__.1
-                0x10007ec4       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10007ed7        0x1 
+                0x10007e38       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10007e4b        0x1 
  .rodata.__func__.2
-                0x10007ed8       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10007eea        0x2 
+                0x10007e4c       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10007e5e        0x2 
  .rodata.__func__.3
-                0x10007eec        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10007e60        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.str1.4
-                0x10007ef8       0x8d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10007e6c       0x8d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
                                  0xf1 (size before relaxing)
- *fill*         0x10007f85        0x3 
+ *fill*         0x10007ef9        0x3 
  .rodata.__func__.1
-                0x10007f88        0xb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x10007f93        0x1 
+                0x10007efc        0xb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10007f07        0x1 
  .rodata.__func__.3
-                0x10007f94       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10007f08       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
  .rodata.__func__.4
-                0x10007fac       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x10007fc1        0x3 
+                0x10007f20       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10007f35        0x3 
  .rodata.__assert_func.str1.4
-                0x10007fc4       0x3f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10007f38       0x3f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x43 (size before relaxing)
- *fill*         0x10008003        0x1 
+ *fill*         0x10007f77        0x1 
  .rodata.runtime_init.str1.4
-                0x10008004       0x63 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10008067        0x1 
+                0x10007f78       0x63 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10007fdb        0x1 
  .rodata.panic.str1.4
-                0x10008068       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x1000807a        0x2 
+                0x10007fdc       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10007fee        0x2 
  .rodata.__func__.1
-                0x1000807c        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10008089        0x3 
+                0x10007ff0        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10007ffd        0x3 
  .rodata.clock_configure.str1.4
-                0x1000808c       0x59 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- *fill*         0x100080e5        0x3 
+                0x10008000       0x59 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ *fill*         0x10008059        0x3 
  .rodata.__func__.1
-                0x100080e8       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000805c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.pll_init.str1.4
-                0x100080f8      0x13b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x10008233        0x1 
+                0x1000806c      0x13b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x100081a7        0x1 
  .rodata.__func__.0
-                0x10008234        0x9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x1000823d        0x3 
+                0x100081a8        0x9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x100081b1        0x3 
  .rodata._ftoa.str1.4
-                0x10008240       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10008255        0x3 
+                0x100081b4       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x100081c9        0x3 
  .rodata._vsnprintf
-                0x10008258      0x19c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x100083f4        0x4 
+                0x100081cc      0x19c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.pow10.0
-                0x100083f8       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10008368       0x50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x10008448       0xaa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- *fill*         0x100084f2        0x2 
+                0x100083b8       0xaa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ *fill*         0x10008462        0x2 
  .rodata.__func__.0
-                0x100084f4       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10008464       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x10008508       0x7c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10008478       0x7c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                  0x80 (size before relaxing)
  .rodata.__func__.0
-                0x10008584       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- *fill*         0x10008597        0x1 
+                0x100084f4       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ *fill*         0x10008507        0x1 
  .rodata.str1.4
-                0x10008598       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008508       0x3c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x100085d4        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008544        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x100085e0        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008550        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x100085ec        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000855c        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.3
-                0x100085f8        0x2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100085fa        0x2 
+                0x10008568        0x2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x1000856a        0x2 
  .rodata._resetd_driver
-                0x100085fc       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x1000856c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.timer_task.str1.4
-                0x10008614       0x6f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10008584       0x6f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.stdio_usb_init.str1.4
-                0x10008683       0x63 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x10008683        0x1 
+                0x100085f3       0x63 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x100085f3        0x1 
  .rodata.str1.4
-                0x10008684       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x10008697        0x1 
+                0x100085f4       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x10008607        0x1 
  .rodata.__bi_118.2
-                0x10008698        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10008608        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.__func__.0
-                0x100086a4       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x100086b9        0x3 
+                0x10008614       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x10008629        0x3 
  .rodata.__func__.1
-                0x100086bc        0xb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x100086c7        0x1 
+                0x1000862c        0xb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x10008637        0x1 
  .rodata.str1.4
-                0x100086c8       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x100086f2        0x2 
+                0x10008638       0x2a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x10008662        0x2 
  .rodata.usbd_desc_cfg
-                0x100086f4       0x54 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10008664       0x54 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x10008748       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x1000875a        0x2 
+                0x100086b8       0x12 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x100086ca        0x2 
  .rodata.usbd_desc_str
-                0x1000875c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x100086cc       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata._hw_endpoint_alloc.str1.4
-                0x10008774       0xb9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x1000882d        0x3 
+                0x100086e4       0xb9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x1000879d        0x3 
  .rodata.dcd_rp2040_irq.str1.4
-                0x10008830       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x100087a0       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.dcd_int_enable.str1.4
-                0x10008844        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x100087b4        0xc CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.__func__.0
-                0x10008850        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x1000885e        0x2 
+                0x100087c0        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100087ce        0x2 
  .rodata.__func__.1
-                0x10008860        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x1000886e        0x2 
+                0x100087d0        0xe CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100087de        0x2 
  .rodata.__func__.3
-                0x10008870       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x100087e0       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.__func__.5
-                0x10008880        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x1000888f        0x1 
+                0x100087f0        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100087ff        0x1 
  .rodata.__func__.6
-                0x10008890       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x100088a3        0x1 
+                0x10008800       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x10008813        0x1 
  .rodata.__func__.7
-                0x100088a4        0x9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x100088ad        0x3 
+                0x10008814        0x9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x1000881d        0x3 
  .rodata.sync_ep_buffer.str1.4
-                0x100088b0       0x95 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x10008945        0x3 
+                0x10008820       0x95 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x100088b5        0x3 
  .rodata._hw_endpoint_buffer_control_update32.str1.4
-                0x10008948       0x1f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x10008967        0x1 
+                0x100088b8       0x1f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x100088d7        0x1 
  .rodata.hw_endpoint_xfer_start.str1.4
-                0x10008968       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x100088d8       0x38 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .rodata.hw_endpoint_xfer_continue.str1.4
-                0x100089a0       0x29 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x100089c9        0x3 
+                0x10008910       0x29 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x10008939        0x3 
  .rodata.str1.4
-                0x100089cc        0x7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x100089d3        0x1 
+                0x1000893c        0x7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x10008943        0x1 
  .rodata.__func__.0
-                0x100089d4        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x100089e3        0x1 
+                0x10008944        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x10008953        0x1 
  .rodata.process_set_config.str1.4
-                0x100089e4       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x100089fb        0x1 
+                0x10008954       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x1000896b        0x1 
  .rodata.process_get_descriptor
-                0x100089fc       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000896c       0x40 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.process_control_request
-                0x10008a3c       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100089ac       0x28 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.tud_task
-                0x10008a64       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100089d4       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.__func__.2
-                0x10008a88        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x10008a97        0x1 
+                0x100089f8        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x10008a07        0x1 
  .rodata.__func__.3
-                0x10008a98        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x10008aa7        0x1 
+                0x10008a08        0xf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x10008a17        0x1 
  .rodata.__func__.4
-                0x10008aa8       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10008a18       0x14 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.__func__.5
-                0x10008abc       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10008a2c       0x10 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.__func__.6
-                0x10008acc       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x10008ae3        0x1 
+                0x10008a3c       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x10008a53        0x1 
  .rodata.__func__.7
-                0x10008ae4       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x10008af7        0x1 
+                0x10008a54       0x13 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x10008a67        0x1 
  .rodata.__func__.8
-                0x10008af8       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10008a68       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.__func__.9
-                0x10008b10        0x9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x10008b19        0x3 
+                0x10008a80        0x9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x10008a89        0x3 
  .rodata._usbd_driver
-                0x10008b1c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10008a8c       0x18 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.tud_control_xfer.str1.4
-                0x10008b34       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10008aa4       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .rodata.__func__.0
-                0x10008b34       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- *fill*         0x10008b49        0x3 
+                0x10008aa4       0x15 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ *fill*         0x10008ab9        0x3 
  .rodata.__func__.1
-                0x10008b4c       0x11 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10008abc       0x11 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .rodata.tud_cdc_n_write_flush.str1.4
-                0x10008b5d       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- *fill*         0x10008b5d        0x3 
+                0x10008acd       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ *fill*         0x10008acd        0x3 
  .rodata.__func__.0
-                0x10008b60        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- *fill*         0x10008b6d        0x3 
+                0x10008ad0        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ *fill*         0x10008add        0x3 
  .rodata.__func__.1
-                0x10008b70        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- *fill*         0x10008b7a        0x2 
+                0x10008ae0        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ *fill*         0x10008aea        0x2 
  .rodata.__func__.2
-                0x10008b7c       0x16 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10008aec       0x16 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
  .rodata.tusb_init.str1.4
-                0x10008b92       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
- *fill*         0x10008b92        0x2 
+                0x10008b02       0x17 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ *fill*         0x10008b02        0x2 
  .rodata.__func__.0
-                0x10008b94       0x11 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
- *fill*         0x10008ba5        0x3 
+                0x10008b04       0x11 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ *fill*         0x10008b15        0x3 
  .rodata.__func__.1
-                0x10008ba8        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
- *fill*         0x10008bb2        0x2 
+                0x10008b18        0xa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ *fill*         0x10008b22        0x2 
  .rodata.pico_get_unique_board_id_string.str1.4
-                0x10008bb4       0x4f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- *fill*         0x10008c03        0x1 
+                0x10008b24       0x4f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ *fill*         0x10008b73        0x1 
  .rodata.__func__.0
-                0x10008c04       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x10008b74       0x20 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .rodata.str1.4
-                0x10008c24      0x15a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- *fill*         0x10008d7e        0x2 
+                0x10008b94      0x15a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ *fill*         0x10008cee        0x2 
  .rodata.__func__.0
-                0x10008d80        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x10008d90                . = ALIGN (0x4)
- *fill*         0x10008d8d        0x3 
+                0x10008cf0        0xd CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x10008d00                . = ALIGN (0x4)
+ *fill*         0x10008cfd        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10008d90                . = ALIGN (0x4)
+                0x10008d00                . = ALIGN (0x4)
 
-.rel.dyn        0x10008d90        0x0
- .rel.iplt      0x10008d90        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x10008d00        0x0
+ .rel.iplt      0x10008d00        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10008d90                __exidx_start = .
+                0x10008d00                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10008d90                __exidx_end = .
-                0x10008d90                . = ALIGN (0x4)
-                0x10008d90                __binary_info_start = .
+                0x10008d00                __exidx_end = .
+                0x10008d00                . = ALIGN (0x4)
+                0x10008d00                __binary_info_start = .
 
-.binary_info    0x10008d90       0x20
+.binary_info    0x10008d00       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x10008d90        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008d00        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10008d94        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008d04        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10008d98        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008d08        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10008d9c        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008d0c        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10008da0        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008d10        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10008da4        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008d14        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x10008da8        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008d18        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr118
-                0x10008dac        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10008db0                __binary_info_end = .
-                0x10008db0                . = ALIGN (0x4)
-                0x10008db0                __etext = .
+                0x10008d1c        0x4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10008d20                __binary_info_end = .
+                0x10008d20                . = ALIGN (0x4)
+                0x10008d20                __etext = .
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -3296,7 +3301,7 @@ LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/n
                 0x20000000       0xc0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x4d0 load address 0x10008db0
+.data           0x200000c0      0x4d0 load address 0x10008d20
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -3407,33 +3412,33 @@ LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/n
                 0x20000590                __data_end__ = .
 
 .tm_clone_table
-                0x20000590        0x0 load address 0x10009280
+                0x20000590        0x0 load address 0x100091f0
  .tm_clone_table
                 0x20000590        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000590        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x20000590        0x0 load address 0x10009280
+.igot.plt       0x20000590        0x0 load address 0x100091f0
  .igot.plt      0x20000590        0x0 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20000590        0x0 load address 0x10009280
+                0x20000590        0x0 load address 0x100091f0
                 0x20000590                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10009280
+.scratch_x      0x20040000        0x0 load address 0x100091f0
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x10009280                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x100091f0                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10009280
+.scratch_y      0x20041000        0x0 load address 0x100091f0
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x10009280                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x100091f0                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20000590      0xd80
                 0x20000590                . = ALIGN (0x4)
@@ -3540,8 +3545,8 @@ LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/n
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10009280        0x0
-                0x10009280                __flash_binary_end = .
+.flash_end      0x100091f0        0x0
+                0x100091f0                __flash_binary_end = .
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -3620,7 +3625,7 @@ LOAD CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_fix/r
 LOAD CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 LOAD CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 LOAD CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-LOAD C:\Users\USER\AppData\Local\Temp\cc420Ba0.o
+LOAD C:\Users\USER\AppData\Local\Temp\ccwM6S1S.o
 LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libstdc++.a
 LOAD d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -3737,7 +3742,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000007a2       0x2c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
  .ARM.attributes
-                0x000007ce       0x22 C:\Users\USER\AppData\Local\Temp\cc420Ba0.o
+                0x000007ce       0x22 C:\Users\USER\AppData\Local\Temp\ccwM6S1S.o
  .ARM.attributes
                 0x000007f0       0x1e d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -3787,54 +3792,54 @@ LOAD linker stubs
  .comment       0x00000033       0x34 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
  .comment       0x00000033       0x34 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp/crtend.o
 
-.debug_info     0x00000000    0x24029
- .debug_info    0x00000000     0x12dc CMakeFiles/blink.dir/main.c.obj
- .debug_info    0x000012dc     0x166e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x0000294a      0x69a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x00002fe4      0x1fb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x000031df      0x5db CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x000037ba     0x1c39 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x000053f3      0x1a3 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x00005596     0x3c01 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x00009197     0x115e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0000a2f5     0x1223 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x0000b518     0x2055 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x0000d56d      0x2cb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_info    0x0000d838      0xa56 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x0000e28e      0xf78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0000f206      0x534 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0000f73a      0x4c5 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x0000fbff      0x1c7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x0000fdc6     0x19b1 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x00011777       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x0001179a      0x26d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x00011a07       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x00011a2a       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x00011a4d      0x33f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x00011d8c       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00011daf       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x00011dd3       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x00011df6      0x34f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x00012145       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x00012168       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x0001218b       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x000121ae      0x2b3 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x00012461     0x1303 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x00013764      0x79d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- .debug_info    0x00013f01     0x1095 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .debug_info    0x00014f96      0x62a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .debug_info    0x000155c0     0x18b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_info    0x00016e70      0xded CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_info    0x00017c5d     0x44f8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_info    0x0001c155      0xa78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_info    0x0001cbcd     0x1c68 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_info    0x0001e835      0xc50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_info    0x0001f485     0x28b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_info    0x00021d35      0x275 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_info    0x00021faa      0xee5 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_info    0x00022e8f     0x108b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_info    0x00023f1a       0x24 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
- .debug_info    0x00023f3e       0xeb d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
+.debug_info     0x00000000    0x23ef0
+ .debug_info    0x00000000     0x11a3 CMakeFiles/blink.dir/main.c.obj
+ .debug_info    0x000011a3     0x166e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x00002811      0x69a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x00002eab      0x1fb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x000030a6      0x5db CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00003681     0x1c39 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x000052ba      0x1a3 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x0000545d     0x3c01 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0000905e     0x115e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000a1bc     0x1223 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0000b3df     0x2055 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x0000d434      0x2cb CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_info    0x0000d6ff      0xa56 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x0000e155      0xf78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0000f0cd      0x534 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x0000f601      0x4c5 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x0000fac6      0x1c7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x0000fc8d     0x19b1 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x0001163e       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x00011661      0x26d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x000118ce       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x000118f1       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x00011914      0x33f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x00011c53       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x00011c76       0x24 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x00011c9a       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x00011cbd      0x34f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x0001200c       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x0001202f       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x00012052       0x23 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x00012075      0x2b3 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x00012328     0x1303 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x0001362b      0x79d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_info    0x00013dc8     0x1095 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_info    0x00014e5d      0x62a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_info    0x00015487     0x18b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_info    0x00016d37      0xded CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_info    0x00017b24     0x44f8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_info    0x0001c01c      0xa78 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_info    0x0001ca94     0x1c68 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_info    0x0001e6fc      0xc50 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_info    0x0001f34c     0x28b0 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_info    0x00021bfc      0x275 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_info    0x00021e71      0xee5 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_info    0x00022d56     0x108b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .debug_info    0x00023de1       0x24 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00023e05       0xeb d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
 
 .debug_abbrev   0x00000000     0x6d73
  .debug_abbrev  0x00000000      0x337 CMakeFiles/blink.dir/main.c.obj
@@ -4147,149 +4152,149 @@ LOAD linker stubs
  .debug_rnglists
                 0x0000180d       0x13 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
 
-.debug_line     0x00000000    0x15ae6
- .debug_line    0x00000000      0x73a CMakeFiles/blink.dir/main.c.obj
- .debug_line    0x0000073a      0xb97 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x000012d1      0x433 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x00001704      0x25e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x00001962      0x438 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x00001d9a      0xf51 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00002ceb      0x20a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x00002ef5     0x1921 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x00004816      0xa49 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x0000525f      0x8fa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x00005b59     0x1022 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00006b7b      0x294 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_line    0x00006e0f      0x82b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000763a      0x979 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x00007fb3      0x537 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x000084ea      0x430 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x0000891a      0x280 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x00008b9a     0x1226 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x00009dc0      0x11a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x00009eda      0x209 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0000a0e3      0x2a9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0000a38c      0x3fa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x0000a786      0x35d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x0000aae3      0x66c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x0000b14f       0x61 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x0000b1b0      0x3b2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x0000b562      0x361 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x0000b8c3      0x198 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x0000ba5b       0x94 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x0000baef       0xa8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x0000bb97      0x1a7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x0000bd3e      0xce7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0000ca25      0x482 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- .debug_line    0x0000cea7      0x9a3 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .debug_line    0x0000d84a      0x31f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .debug_line    0x0000db69      0xb87 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_line    0x0000e6f0      0x8ca CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_line    0x0000efba     0x230a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_line    0x000112c4      0x5e8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_line    0x000118ac      0xece CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_line    0x0001277a      0x6c1 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_line    0x00012e3b     0x1552 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_line    0x0001438d      0x365 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_line    0x000146f2      0x78a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_line    0x00014e7c      0xa3f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_line    0x000158bb       0x4a d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
- .debug_line    0x00015905      0x1e1 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
+.debug_line     0x00000000    0x15ab5
+ .debug_line    0x00000000      0x709 CMakeFiles/blink.dir/main.c.obj
+ .debug_line    0x00000709      0xb97 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x000012a0      0x433 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x000016d3      0x25e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x00001931      0x438 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00001d69      0xf51 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x00002cba      0x20a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x00002ec4     0x1921 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x000047e5      0xa49 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x0000522e      0x8fa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x00005b28     0x1022 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x00006b4a      0x294 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_line    0x00006dde      0x82b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x00007609      0x979 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x00007f82      0x537 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x000084b9      0x430 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x000088e9      0x280 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x00008b69     0x1226 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x00009d8f      0x11a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x00009ea9      0x209 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0000a0b2      0x2a9 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0000a35b      0x3fa CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x0000a755      0x35d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x0000aab2      0x66c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x0000b11e       0x61 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x0000b17f      0x3b2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x0000b531      0x361 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0000b892      0x198 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x0000ba2a       0x94 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x0000babe       0xa8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x0000bb66      0x1a7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x0000bd0d      0xce7 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x0000c9f4      0x482 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_line    0x0000ce76      0x9a3 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_line    0x0000d819      0x31f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_line    0x0000db38      0xb87 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_line    0x0000e6bf      0x8ca CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_line    0x0000ef89     0x230a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_line    0x00011293      0x5e8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_line    0x0001187b      0xece CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_line    0x00012749      0x6c1 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_line    0x00012e0a     0x1552 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_line    0x0001435c      0x365 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_line    0x000146c1      0x78a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_line    0x00014e4b      0xa3f CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .debug_line    0x0001588a       0x4a d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .debug_line    0x000158d4      0x1e1 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
 
-.debug_str      0x00000000     0x6de9
- .debug_str     0x00000000      0x54e CMakeFiles/blink.dir/main.c.obj
-                                0x5eb (size before relaxing)
- .debug_str     0x0000054e      0x534 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+.debug_str      0x00000000     0x6de3
+ .debug_str     0x00000000      0x548 CMakeFiles/blink.dir/main.c.obj
+                                0x5e5 (size before relaxing)
+ .debug_str     0x00000548      0x534 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                                 0x98c (size before relaxing)
- .debug_str     0x00000a82      0x1be CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_str     0x00000a7c      0x1be CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
                                 0x358 (size before relaxing)
- .debug_str     0x00000c40       0x83 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_str     0x00000c3a       0x83 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
                                 0x214 (size before relaxing)
- .debug_str     0x00000cc3       0xee CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_str     0x00000cbd       0xee CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
                                 0x33f (size before relaxing)
- .debug_str     0x00000db1      0x42c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_str     0x00000dab      0x42c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                 0x805 (size before relaxing)
- .debug_str     0x000011dd       0x5e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_str     0x000011d7       0x5e CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
                                 0x1f5 (size before relaxing)
- .debug_str     0x0000123b      0x757 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_str     0x00001235      0x757 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_time/time.c.obj
                                 0xbab (size before relaxing)
- .debug_str     0x00001992      0x138 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_str     0x0000198c      0x138 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
                                 0x69b (size before relaxing)
- .debug_str     0x00001aca       0xe8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_str     0x00001ac4       0xe8 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
                                 0x3e5 (size before relaxing)
- .debug_str     0x00001bb2      0x167 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_str     0x00001bac      0x167 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
                                 0x5b9 (size before relaxing)
- .debug_str     0x00001d19       0xd6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_str     0x00001d13       0xd6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/common/pico_sync/critical_section.c.obj
                                 0x2b5 (size before relaxing)
- .debug_str     0x00001def      0x28b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_str     0x00001de9      0x28b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                 0x5f7 (size before relaxing)
- .debug_str     0x0000207a      0x278 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_str     0x00002074      0x278 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
                                 0x679 (size before relaxing)
- .debug_str     0x000022f2       0x91 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_str     0x000022ec       0x91 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
                                 0x2cf (size before relaxing)
- .debug_str     0x00002383      0x128 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_str     0x0000237d      0x128 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
                                 0x316 (size before relaxing)
- .debug_str     0x000024ab       0x6d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_str     0x000024a5       0x6d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
                                 0x213 (size before relaxing)
- .debug_str     0x00002518      0x268 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_str     0x00002512      0x268 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
                                 0x474 (size before relaxing)
- .debug_str     0x00002780       0x55 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_str     0x0000277a       0x55 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
                                  0x6d (size before relaxing)
- .debug_str     0x000027d5       0xc6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_str     0x000027cf       0xc6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
                                 0x24e (size before relaxing)
- .debug_str     0x0000289b       0x43 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_str     0x00002895       0x43 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
                                  0x67 (size before relaxing)
- .debug_str     0x000028de       0x47 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_str     0x000028d8       0x47 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
                                  0x6b (size before relaxing)
- .debug_str     0x00002925       0xbf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_str     0x0000291f       0xbf CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
                                 0x2b4 (size before relaxing)
- .debug_str     0x000029e4       0x4d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_str     0x000029de       0x4d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
                                  0x71 (size before relaxing)
- .debug_str     0x00002a31       0x52 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_str     0x00002a2b       0x52 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
                                  0x76 (size before relaxing)
- .debug_str     0x00002a83       0x45 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_str     0x00002a7d       0x45 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
                                  0x69 (size before relaxing)
- .debug_str     0x00002ac8       0x83 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_str     0x00002ac2       0x83 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                 0x2b0 (size before relaxing)
- .debug_str     0x00002b4b       0x4b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_str     0x00002b45       0x4b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
                                  0x6f (size before relaxing)
- .debug_str     0x00002b96       0x49 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_str     0x00002b90       0x49 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
                                  0x6d (size before relaxing)
- .debug_str     0x00002bdf       0x46 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_str     0x00002bd9       0x46 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
                                  0x6a (size before relaxing)
- .debug_str     0x00002c25      0x246 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_str     0x00002c1f      0x246 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
                                 0x3d6 (size before relaxing)
- .debug_str     0x00002e6b      0x35b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_str     0x00002e65      0x35b CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
                                 0x7b2 (size before relaxing)
- .debug_str     0x000031c6      0x662 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_str     0x000031c0      0x662 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
                                 0x857 (size before relaxing)
- .debug_str     0x00003828      0x25a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_str     0x00003822      0x25a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
                                 0x924 (size before relaxing)
- .debug_str     0x00003a82      0xae4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_str     0x00003a7c      0xae4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
                                 0xf82 (size before relaxing)
- .debug_str     0x00004566      0x933 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_str     0x00004560      0x933 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
                                 0xe15 (size before relaxing)
- .debug_str     0x00004e99      0x13c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_str     0x00004e93      0x13c CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                                 0x84b (size before relaxing)
- .debug_str     0x00004fd5      0xa02 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_str     0x00004fcf      0xa02 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
                                0x18a9 (size before relaxing)
- .debug_str     0x000059d7       0xd6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_str     0x000059d1       0xd6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
                                 0x623 (size before relaxing)
- .debug_str     0x00005aad      0x6e4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_str     0x00005aa7      0x6e4 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
                                0x1668 (size before relaxing)
- .debug_str     0x00006191       0xd6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_str     0x0000618b       0xd6 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/tusb.c.obj
                                 0x8b5 (size before relaxing)
- .debug_str     0x00006267      0x38d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_str     0x00006261      0x38d CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
                                 0x788 (size before relaxing)
- .debug_str     0x000065f4       0xc2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_str     0x000065ee       0xc2 CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
                                 0x267 (size before relaxing)
- .debug_str     0x000066b6      0x30a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_str     0x000066b0      0x30a CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
                                 0x5d6 (size before relaxing)
- .debug_str     0x000069c0      0x1ec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+ .debug_str     0x000069ba      0x1ec CMakeFiles/blink.dir/D_/Raspberry/RP2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
                                 0x585 (size before relaxing)
- .debug_str     0x00006bac       0xc9 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .debug_str     0x00006ba6       0xc9 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
                                  0xd5 (size before relaxing)
- .debug_str     0x00006c75      0x174 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
+ .debug_str     0x00006c6f      0x174 d:/arm toolchain/11.3 rel1/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v6-m/nofp\libg.a(libc_a-strlen-stub.o)
                                 0x21d (size before relaxing)
 
 .debug_frame    0x00000000     0x29b8

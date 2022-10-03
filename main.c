@@ -29,6 +29,7 @@ void escribirReg(spi_inst_t *spi, uint8_t reg, uint8_t data);
 void config(spi_inst_t *spi);
 void leerBytes(spi_inst_t *spi, uint8_t reg, char *msg, uint8_t size);
 void ModoTx(spi_inst_t* spi);
+void ModoRx(spi_inst_t* spi);
 void enviarMsg(spi_inst_t* spi, char *msg);
 void recirbirMsg(spi_inst_t* spi, char *msg);
 uint8_t nuevoMsg(spi_inst_t* spi);
@@ -63,26 +64,18 @@ int main() {
     gpio_set_function(miso_pin, GPIO_FUNC_SPI);
 
     config(spi);
-    char datoRx[5];
-    char datoTx[5];
+    ModoRx(spi);
+    char mensaje[7];
     // Loop forever
     while (true) {
-        if(leerReg(spi, CONFIG) != 0x0A){
-        printf("\n Off");
-        }else{
-            printf("\n On ");
+        
+        if (nuevoMsg(spi))
+        {
+            recirbirMsg(spi, (uint8_t*)&mensaje);
+            printf("%s \t", mensaje);
+            sleep_ms(50);
         }
-
-        printf("\n Shockburst:%x", leerReg(spi, EN_AA));
-        printf("\n Canal:%x", leerReg(spi, RF_CH));
-        leerBytes(spi, RX_ADDR, (uint8_t*)&datoRx, 5);
-        printf("\n Rx:%s", datoRx); 
-        leerBytes(spi, TX_ADDR, (uint8_t*)&datoTx, 5);
-        printf("\n Tx:%s", datoTx); 
-        printf("\n paquetes:%d", leerReg(spi, RX_PW)); 
-        printf("\n STATUS = %x", leerReg(spi, CONFIG));
-        sleep_ms(1000);
-
+        
     }
     return 0;
 }
