@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <string.h>
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
+#include "hardware/uart.h"
 
 //********************************Comandos nRF24***************
 #define NOP 0xFF
@@ -33,6 +35,8 @@ void ModoRx(spi_inst_t* spi);
 void enviarMsg(spi_inst_t* spi, char *msg);
 void recirbirMsg(spi_inst_t* spi, char *msg);
 uint8_t nuevoMsg(spi_inst_t* spi);
+// *************************************funciones uart*********
+void enviar_datos(short SQN, short SQN1);
 
 //********************************Variables Globales***********
 const int sck_pin = 10;
@@ -41,6 +45,14 @@ const int miso_pin = 12;
 const int cs_pin = 13; // cns
 const int ce_pin = 22; // RX__TX
 
+//********************************Variables uart***************
+short sqn = 0;
+short sqn1 = 0;
+int16_t input;
+char get; 
+
+
+//*********************************Codigo tipo C***************
 int main() {
     sleep_ms(100);
     spi_inst_t *spi = spi1;
@@ -65,16 +77,25 @@ int main() {
 
     config(spi);
     ModoRx(spi);
-    char mensaje[7];
+    char mensaje[32];
     // Loop forever
     while (true) {
-        
-        if (nuevoMsg(spi))
-        {
+
+        if(nuevoMsg(spi)==1){
             recirbirMsg(spi, (uint8_t*)&mensaje);
-            printf("%s \t", mensaje);
-            sleep_ms(50);
+            printf("\nMensaje:%s", mensaje);
+
+            char *token = strtok(mensaje, " ");
+            if(token != NULL){
+                while(token != NULL){
+                    printf("\nsize:%s", token);
+                    token = strtok(mensaje, " ");
+                }
+            }
+            
+            sleep_ms(100);
         }
+        enviar_datos(sqn,sqn1);
         
     }
     return 0;
@@ -192,4 +213,29 @@ void recirbirMsg(spi_inst_t* spi, char *msg){
 uint8_t nuevoMsg(spi_inst_t* spi){
     uint8_t fifo_status = leerReg(spi, FIFO_STATUS) & 0x01;
     return !fifo_status;
+}
+
+//*********************************************contexto funciones uart
+void enviar_datos(short SQN, short SQN1){
+
+ 
+        uint8_t pre = 253;
+        int8_t mid = 11;
+
+    
+        int sumAr[] = {};
+       int8_t len[] = { };
+       int8_t ldata[] ={ };
+       int8_t ldata2[] = {};
+       int8_t ldata3[] = {};
+       SQN++;
+       SQN1 = SQN*2;
+  
+       //len [i] = ldata[i] + ldata2[i] + ldata3[i];
+       //sumAr[i] = valor1[i]+valor2[i]+valor3[i];
+       //printf("%d,%d,%d,%d,%d,%d,%d,%d\n",pre,SQN1,mid,len[i], valor1[i], valor2[i], valor3[i], sumAr[i]);
+       sleep_ms(500);
+       
+    
+    
 }

@@ -2749,6 +2749,10 @@ CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\inclu
 CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\include\machine\_types.h"
 CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\include\sys\lock.h"
 CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\include\sys\stdio.h"
+CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\include\string.h"
+CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\include\sys\_locale.h"
+CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\include\strings.h"
+CMakeFiles\blink.dir\main.c.obj: "D:\ARM toolchain\11.3 rel1\arm-none-eabi\include\sys\string.h"
 CMakeFiles\blink.dir\main.c.obj: D:\Raspberry\RP2040\pico-sdk\src\common\pico_stdlib\include\pico\stdlib.h
 CMakeFiles\blink.dir\main.c.obj: D:\Raspberry\RP2040\pico-sdk\src\common\pico_base\include\pico.h
 CMakeFiles\blink.dir\main.c.obj: D:\Raspberry\RP2040\pico-sdk\src\common\pico_base\include\pico\types.h
