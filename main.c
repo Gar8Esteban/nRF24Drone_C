@@ -77,21 +77,24 @@ int main() {
 
     config(spi);
     ModoRx(spi);
-    char mensaje[32];
+    char mensaje[32], 
+    delimitador[] = " ";
+    char *token;
     // Loop forever
     while (true) {
 
         if(nuevoMsg(spi)==1){
             recirbirMsg(spi, (uint8_t*)&mensaje);
             printf("\nMensaje:%s", mensaje);
-
-            char *token = strtok(mensaje, " ");
+            char *token = strtok(mensaje, delimitador);
             if(token != NULL){
-                while(token != NULL){
-                    printf("\nsize:%s", token);
-                    token = strtok(mensaje, " ");
-                }
+            while(token != NULL){
+                // Sólo en la primera pasamos la cadena; en las siguientes pasamos NULL
+                printf("\nToken: %s\n", token);
+                token = strtok(NULL, delimitador);
             }
+    }
+            
             
             sleep_ms(100);
         }
