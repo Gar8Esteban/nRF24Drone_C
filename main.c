@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
 #include "hardware/uart.h"
+#include "hardware/gpio.h"
+#include "hardware/timer.h"
+#define LED_PIN 25
 
 //********************************Comandos nRF24***************
 #define NOP 0xFF
@@ -35,8 +39,9 @@ void ModoRx(spi_inst_t* spi);
 void enviarMsg(spi_inst_t* spi, char *msg);
 void recirbirMsg(spi_inst_t* spi, char *msg);
 uint8_t nuevoMsg(spi_inst_t* spi);
+void modoStby(spi_inst_t* spi);
 // *************************************funciones uart*********
-void enviar_datos(short SQN, short SQN1);
+void enviar_datos(int acx, int acy, int acz, int gx, int gy, int gz);
 
 //********************************Variables Globales***********
 const int sck_pin = 10;
@@ -50,7 +55,19 @@ short sqn = 0;
 short sqn1 = 0;
 int16_t input;
 char get; 
+char buffer[32];
 
+//*********************************Interrupcion por timer******
+int led_value = 0;
+int estado = 0;
+bool repeating_timer_callback(struct repeating_timer *t)
+{
+    led_value = 1 - led_value;
+    gpio_put(LED_PIN, led_value);
+    estado = 1 - estado;
+
+    return true;
+}
 
 //*********************************Codigo tipo C***************
 int main() {
@@ -59,6 +76,13 @@ int main() {
 
     // Initialize chosen serial port
     stdio_init_all();
+
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+
+    struct repeating_timer timer;
+    add_repeating_timer_ms(500, repeating_timer_callback, NULL, &timer);
+    
 
     gpio_init(cs_pin);
     gpio_set_dir(cs_pin, GPIO_OUT);
@@ -76,30 +100,66 @@ int main() {
     gpio_set_function(miso_pin, GPIO_FUNC_SPI);
 
     config(spi);
-    ModoRx(spi);
+   
     char mensaje[32], 
-    delimitador[] = " ";
+    delimitador[] = " ",
+    primerMensaje[32],
+    envioMensaje[32];
     char *token;
+    char accelX[16], accelY[16], accelZ[16];
+    int cont = 0;
+    int acX, acY, acZ, gX, gY, gZ;
+    // Timers
+
     // Loop forever
+    ModoRx(spi);
+
     while (true) {
 
         if(nuevoMsg(spi)==1){
             recirbirMsg(spi, (uint8_t*)&mensaje);
-            printf("\nMensaje:%s", mensaje);
             char *token = strtok(mensaje, delimitador);
             if(token != NULL){
             while(token != NULL){
-                // Sólo en la primera pasamos la cadena; en las siguientes pasamos NULL
-                printf("\nToken: %s\n", token);
-                token = strtok(NULL, delimitador);
+
+                if(cont >= 0 && cont <= 5){
+                    if(cont==0){
+                        acX = atoi(token);
+                        //printf("\nAceleración X =%d", acX);
+                        token = strtok(NULL, delimitador);
+                    }else if(cont==1){
+                        acY = atoi(token);
+                        //printf("\nAceleración Y =%d", acY);   
+                        token = strtok(NULL, delimitador); 
+                    }else if(cont==2){
+                        acZ = atoi(token);
+                        //printf("\nAceleración Z =%d", acZ);
+                        token = strtok(NULL, delimitador);
+                    }else if(cont==3){
+                        gX = atoi(token);
+                        //printf("\nGyro X =%d", gX);
+                        token = strtok(NULL, delimitador);
+                    }else if(cont==4){
+                        gY = atoi(token);
+                        //printf("\nGyro Y =%d", gY);
+                        token = strtok(NULL, delimitador);
+                    }else if(cont==5){
+                        gZ = atoi(token);
+                        //printf("\nGyro Z =%d", gZ);
+                        token = strtok(NULL, delimitador);
+                    }
+                    cont++;
+                }else{
+                    cont = 0;
+                }
             }
     }
             
-            
-            sleep_ms(100);
         }
-        enviar_datos(sqn,sqn1);
-        
+		
+		enviar_datos(acX, acY, acZ, gX, gY, gZ);
+
+        sleep_ms(100);
     }
     return 0;
 }
@@ -213,32 +273,43 @@ void recirbirMsg(spi_inst_t* spi, char *msg){
     csHigh();
 }
 
-uint8_t nuevoMsg(spi_inst_t* spi){
+uint8_t nuevoMsg(spi_inst_t* spi)
+{
     uint8_t fifo_status = leerReg(spi, FIFO_STATUS) & 0x01;
     return !fifo_status;
 }
 
+void modoStby(spi_inst_t* spi)
+{
+    if(gpio_get(ce_pin))
+    {
+        ceLow();
+    }
+}
+
+
 //*********************************************contexto funciones uart
-void enviar_datos(short SQN, short SQN1){
+void enviar_datos(int acx, int acy, int acz, int gx, int gy, int gz){
 
- 
-        uint8_t pre = 253;
-        int8_t mid = 11;
+    short SQN = 0, SQN1 = 0;
+    uint8_t pre = 253;
+    int8_t mid = 11;
 
-    
-        int sumAr[] = {};
-       int8_t len[] = { };
-       int8_t ldata[] ={ };
-       int8_t ldata2[] = {};
-       int8_t ldata3[] = {};
+     int sumAr;
+    int8_t len;
+    int8_t ldata;
+    int8_t ldata2;
+    int8_t ldata3;
+
+
        SQN++;
        SQN1 = SQN*2;
-  
-       //len [i] = ldata[i] + ldata2[i] + ldata3[i];
-       //sumAr[i] = valor1[i]+valor2[i]+valor3[i];
-       //printf("%d,%d,%d,%d,%d,%d,%d,%d\n",pre,SQN1,mid,len[i], valor1[i], valor2[i], valor3[i], sumAr[i]);
+       ldata = sizeof(acx) + sizeof(gx);
+       ldata2 = sizeof(acy) + sizeof(gy);
+       ldata3 = sizeof(acz) + sizeof(gz);
+       len = ldata + ldata2 + ldata3;
+       sumAr = acx + acy + acz + gx + gy + gz;
+       printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",pre,SQN1,mid,len, acx, acy, acz, gx, gy, gz, sumAr);
        sleep_ms(500);
-       
-    
-    
+
 }

@@ -25,6 +25,8 @@ target_link_libraries(${PROJECT_NAME}
     pico_stdlib
     hardware_spi
     hardware_uart
+    hardware_gpio
+    hardware_timer
 )
 
 # Enable usb output, disable uart output
