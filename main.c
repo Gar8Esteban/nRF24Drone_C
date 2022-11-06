@@ -108,7 +108,7 @@ int main() {
     char *token;
     char accelX[16], accelY[16], accelZ[16];
     int cont = 0;
-    int acX, acY, acZ, gX, gY, gZ;
+    int acX, acY, acZ, gX, gY, gZ, dist;
     // Timers
 
     // Loop forever
@@ -122,30 +122,34 @@ int main() {
             if(token != NULL){
             while(token != NULL){
 
-                if(cont >= 0 && cont <= 5){
+                if(cont >= 0 && cont <= 6){
                     if(cont==0){
                         acX = atoi(token);
-                        //printf("\nAceleración X =%d", acX);
+                        printf("\nAceleración X =%d", acX);
                         token = strtok(NULL, delimitador);
                     }else if(cont==1){
                         acY = atoi(token);
-                        //printf("\nAceleración Y =%d", acY);   
+                        printf("\nAceleración Y =%d", acY);   
                         token = strtok(NULL, delimitador); 
                     }else if(cont==2){
                         acZ = atoi(token);
-                        //printf("\nAceleración Z =%d", acZ);
+                        printf("\nAceleración Z =%d", acZ);
                         token = strtok(NULL, delimitador);
                     }else if(cont==3){
                         gX = atoi(token);
-                        //printf("\nGyro X =%d", gX);
+                        printf("\nGyro X =%d", gX);
                         token = strtok(NULL, delimitador);
                     }else if(cont==4){
                         gY = atoi(token);
-                        //printf("\nGyro Y =%d", gY);
+                        printf("\nGyro Y =%d", gY);
                         token = strtok(NULL, delimitador);
                     }else if(cont==5){
                         gZ = atoi(token);
-                        //printf("\nGyro Z =%d", gZ);
+                        printf("\nGyro Z =%d", gZ);
+                        token = strtok(NULL, delimitador);
+                    }else if(cont==6){
+                        dist = atoi(token);
+                        printf("\nDistancia =%d", dist);
                         token = strtok(NULL, delimitador);
                     }
                     cont++;
@@ -157,9 +161,7 @@ int main() {
             
         }
 		
-		enviar_datos(acX, acY, acZ, gX, gY, gZ);
-
-        sleep_ms(100);
+		//enviar_datos(acX, acY, acZ, gX, gY, gZ);
     }
     return 0;
 }
